@@ -1,0 +1,12 @@
+<div class="card">
+  <div class="card-header">
+    <span [appState]="item.state">{{ item.state | uppercase }}</span>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">{{ item.name }}</h5>
+    <p class="card-text">Réf. : {{ item.reference | ref:item.state }}</p>
+    <p class="card-text">Né le {{ item.birthdate | date:'fullDate' }}</p>
+    <button class="btn btn-primary" *ngIf="item.state === state.ALIVRER" (click)="changeState(state.ENCOURS)">{{state.ENCOURS}}</button>
+    <button class="btn btn-primary" *ngIf="item.state === state.ENCOURS" (click)="changeState(state.LIVREE)">{{state.LIVREE}}</button>
+  </div>
+</div>
