@@ -8,26 +8,30 @@ import { FilterPipe } from './pipes/filter.pipe';
 import { RefPipe } from './pipes/ref.pipe';
 import { RouterModule } from '@angular/router';
 import { NavCollapseDirective } from './directives/nav-collapse.directive';
+import { FormComponent } from './components/form/form.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
     CommonModule,
     NgbModule,
-    RouterModule
+    RouterModule,
+    FormsModule
   ],
   exports: [
     NavComponent,
+    FormComponent,
     StateDirective,
     FilterPipe,
-    RefPipe,
-    NavCollapseDirective
+    RefPipe
   ],
   declarations: [
     NavComponent,
     StateDirective,
     FilterPipe,
     RefPipe,
-    NavCollapseDirective
+    NavCollapseDirective,
+    FormComponent
   ]
 })
 export class SharedModule { }

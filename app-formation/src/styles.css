@@ -1,4 +1,6 @@
+router-outlet,
 .card {
+  display: block;
   margin-top: 1rem
 }
 .state-alivrer {
