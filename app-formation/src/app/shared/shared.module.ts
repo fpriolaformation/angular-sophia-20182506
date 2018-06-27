@@ -9,18 +9,21 @@ import { RefPipe } from './pipes/ref.pipe';
 import { RouterModule } from '@angular/router';
 import { NavCollapseDirective } from './directives/nav-collapse.directive';
 import { FormComponent } from './components/form/form.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormReactComponent } from './components/form-react/form-react.component';
 
 @NgModule({
   imports: [
     CommonModule,
     NgbModule,
     RouterModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports: [
     NavComponent,
     FormComponent,
+    FormReactComponent,
     StateDirective,
     FilterPipe,
     RefPipe
@@ -31,7 +34,8 @@ import { FormsModule } from '@angular/forms';
     FilterPipe,
     RefPipe,
     NavCollapseDirective,
-    FormComponent
+    FormComponent,
+    FormReactComponent
   ]
 })
 export class SharedModule { }

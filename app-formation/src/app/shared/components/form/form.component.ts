@@ -12,8 +12,8 @@ export class FormComponent implements OnInit {
 
   public model;
   public intitules = Object.values(State);
-  public newItem: Item;
   public birthdate: NgbDateStruct;
+  public newItem: Item;
 
   @Output() nItem: EventEmitter<Item> = new EventEmitter<Item>();
 
