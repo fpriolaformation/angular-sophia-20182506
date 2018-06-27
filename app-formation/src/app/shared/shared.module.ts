@@ -6,23 +6,28 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { StateDirective } from './directives/state.directive';
 import { FilterPipe } from './pipes/filter.pipe';
 import { RefPipe } from './pipes/ref.pipe';
+import { RouterModule } from '@angular/router';
+import { NavCollapseDirective } from './directives/nav-collapse.directive';
 
 @NgModule({
   imports: [
     CommonModule,
-    NgbModule
+    NgbModule,
+    RouterModule
   ],
   exports: [
     NavComponent,
     StateDirective,
     FilterPipe,
-    RefPipe
+    RefPipe,
+    NavCollapseDirective
   ],
   declarations: [
     NavComponent,
     StateDirective,
     FilterPipe,
-    RefPipe
+    RefPipe,
+    NavCollapseDirective
   ]
 })
 export class SharedModule { }

@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class NavComponent implements OnInit {
 
   public isCollapsed = true;
+  public appTitle = "My Super App Angular 6!";
 
   constructor() { }
 

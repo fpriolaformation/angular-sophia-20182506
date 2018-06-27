@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ListItemsComponent } from './containers/list-items/list-items.component';
 import { SharedModule } from '../shared/shared.module';
 import { ItemComponent } from './components/item/item.component';
+import { ItemsRoutingModule } from './items-routing.module';
 
 @NgModule({
   exports : [
@@ -10,7 +11,8 @@ import { ItemComponent } from './components/item/item.component';
   ],
   imports: [
     CommonModule,
-    SharedModule
+    SharedModule,
+    ItemsRoutingModule
   ],
   declarations: [
     ListItemsComponent,
@@ -18,5 +20,5 @@ import { ItemComponent } from './components/item/item.component';
   ]
 })
 export class ItemsModule {
-  
+
 }
