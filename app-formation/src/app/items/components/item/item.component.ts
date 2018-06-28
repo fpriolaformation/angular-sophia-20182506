@@ -2,21 +2,28 @@ import { Component } from '@angular/core';
 import { Input } from '@angular/core';
 import { State } from '../../../shared/enums/state.enum';
 import { Item } from '../../../shared/interfaces/item.model';
+import { CollectionService } from '../../../core/services/collection.service';
 
 @Component({
   selector: 'app-item',
   templateUrl: './item.component.html',
-  styleUrls: ['./item.component.css']
+  styleUrls: ['./item.component.scss']
 })
 export class ItemComponent {
 
   @Input() item: Item;
   public state = State;
-  constructor() { }
+  constructor(
+    private collectionService: CollectionService
+  ) { }
 
   public changeState(state: State): void {
     this.item.state = state;
-    // par la suite on appelera la methode update de collectionService pour persister dans la bd
+    this.collectionService.update(this.item);
+  }
+
+  public delete():void {
+    this.collectionService.delete(this.item);
   }
 
 }

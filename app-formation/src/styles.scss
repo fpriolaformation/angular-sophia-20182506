@@ -12,3 +12,13 @@ router-outlet,
 .state-livree {
   color: green;
 }
+
+.card-header {
+  button {
+    float: right;
+    cursor: pointer;
+    & + button {
+      margin-left: 10px;
+    }
+  }
+}

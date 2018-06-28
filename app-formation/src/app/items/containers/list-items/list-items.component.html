@@ -1,6 +1,6 @@
 <div class="container">
-  <input type="text" class="form-control" #search (keyup)="false"/>
-  <ng-container *ngFor="let item of collection | filter:search.value">
+  <input type="text" class="form-control" #search (keyup)="false" placeholder="rechercher...">
+  <ng-container *ngFor="let item of (collection | async) | filter:search.value">
     <app-item [item]="item"></app-item>
   </ng-container>
 </div>

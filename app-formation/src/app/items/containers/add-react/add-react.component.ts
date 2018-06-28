@@ -22,6 +22,6 @@ export class AddReactComponent implements OnInit {
 
   public add(item: Item): void {
     this.collectionService.add(item);
-    //this.router.navigate(['list']);
+    this.router.navigate(['items/list']);
   }
 }
